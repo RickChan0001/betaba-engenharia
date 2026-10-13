@@ -1,0 +1,34 @@
+---
+const servicos = [
+  { titulo: 'Construção Residencial', desc: 'Casas, sobrados e condomínios com acabamento premium.', icone: '🏠' },
+  { titulo: 'Obras Comerciais', desc: 'Lojas, restaurantes, pousadas e edificações corporativas.', icone: '🏢' },
+  { titulo: 'Infraestrutura', desc: 'Fundações, contenções, drenagem e obras de porte.', icone: '🏗️' },
+  { titulo: 'Reformas', desc: 'Modernização, ampliação e retrofit de imóveis.', icone: '🔨' },
+  { titulo: 'Projetos & Consultoria', desc: 'Planejamento, orçamento e acompanhamento técnico.', icone: '📐' },
+  { titulo: 'Regularização', desc: 'Documentação, aprovação em prefeitura e habite-se.', icone: '📋' }
+];
+---
+<section id="servicos" class="py-20 md:py-28 bg-white">
+  <div class="container">
+    <header class="text-center mb-16">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle mt-4">
+        Soluções completas em engenharia civil para o litoral do Paraná.
+      </p>
+    </header>
+
+    <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {servicos.map(s => (
+        <li class="group bg-bg hover:bg-navy rounded-xl p-6 transition-colors duration-300 border border-silver/30">
+          <div class="text-3xl mb-4" aria-hidden="true">{s.icone}</div>
+          <h3 class="font-display font-bold text-lg text-navy group-hover:text-white transition-colors">
+            {s.titulo}
+          </h3>
+          <p class="mt-2 text-sm text-graphite/80 group-hover:text-silver/90 transition-colors">
+            {s.desc}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
