@@ -1,0 +1,51 @@
+<section id="sobre" class="py-20 md:py-28">
+  <div class="container grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <h2 class="section-title">Quem Somos</h2>
+      <p class="mt-6 text-graphite/90 leading-relaxed">
+        A <strong>BETABA Engenharia</strong> nasceu no litoral do Paraná com o propósito
+        de elevar o padrão da construção civil na região. Unimos experiência técnica,
+        materiais de qualidade e uma equipe comprometida com cada detalhe.
+      </p>
+      <p class="mt-4 text-graphite/90 leading-relaxed">
+        Do projeto à entrega, cuidamos de tudo com transparência, prazos respeitados
+        e comunicação clara — porque construir é, acima de tudo, uma relação de confiança.
+      </p>
+
+      <dl class="mt-10 grid grid-cols-3 gap-6">
+        <div>
+          <dt class="text-3xl md:text-4xl font-display font-extrabold text-steel">+50</dt>
+          <dd class="text-sm text-graphite/70 mt-1">Obras entregues</dd>
+        </div>
+        <div>
+          <dt class="text-3xl md:text-4xl font-display font-extrabold text-steel">10+</dt>
+          <dd class="text-sm text-graphite/70 mt-1">Anos de experiência</dd>
+        </div>
+        <div>
+          <dt class="text-3xl md:text-4xl font-display font-extrabold text-steel">100%</dt>
+          <dd class="text-sm text-graphite/70 mt-1">Compromisso</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="bg-white rounded-2xl p-8 shadow-sm border border-silver/40">
+      <h3 class="font-display font-bold text-navy text-xl mb-6">Nossos valores</h3>
+      <ul class="space-y-4">
+        {[
+          ['Qualidade técnica', 'Materiais e mão de obra de primeira linha.'],
+          ['Transparência', 'Orçamento claro, sem surpresas no final.'],
+          ['Prazos cumpridos', 'Cronograma respeitado do início ao fim.'],
+          ['Compromisso local', 'Conhecemos o litoral e suas particularidades.']
+        ].map(([t, d]) => (
+          <li class="flex gap-4">
+            <span aria-hidden="true" class="mt-1 w-2 h-2 rounded-full bg-steel-light shrink-0"></span>
+            <div>
+              <strong class="text-navy font-semibold block">{t}</strong>
+              <span class="text-sm text-graphite/75">{d}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  </div>
+</section>
