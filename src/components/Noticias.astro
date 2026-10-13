@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+const todas = await getCollection('noticias');
+const noticias = todas
+  .sort((a, b) => b.data.data.valueOf() - a.data.data.valueOf())
+  .slice(0, 3);
+const fmt = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+---
+<section id="noticias" class="py-20 md:py-28 bg-white">
+  <div class="container">
+    <header class="text-center mb-16">
+      <h2 class="section-title">Últimas Notícias</h2>
+      <p class="section-subtitle mt-4">
+        Acompanhe nossos projetos e novidades no litoral do Paraná.
+      </p>
+    </header>
+
+    {noticias.length === 0 ? (
+      <p class="text-center text-graphite/60 italic">
+        Nenhuma notícia publicada ainda.
+      </p>
+    ) : (
+      <ul class="grid gap-6 md:grid-cols-3">
+        {noticias.map(n => (
+          <li>
+            <article class="bg-bg rounded-xl overflow-hidden border border-silver/30 hover:shadow-lg transition-shadow h-full">
+              {n.data.imagem && (
+                <img
+                  src={n.data.imagem}
+                  alt=""
+                  loading="lazy" decoding="async"
+                  class="w-full h-48 object-cover"
+                />
+              )}
+              <div class="p-6">
+                <time datetime={n.data.data.toISOString()} class="text-xs uppercase tracking-wider text-steel font-semibold">
+                  {fmt.format(n.data.data)} · {n.data.local}
+                </time>
+                <h3 class="mt-2 font-display font-bold text-lg text-navy">{n.data.titulo}</h3>
+                <p class="mt-2 text-sm text-graphite/80">{n.data.resumo}</p>
+              </div>
+            </article>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</section>
