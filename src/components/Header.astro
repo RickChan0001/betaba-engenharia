@@ -1,0 +1,36 @@
+---
+const links = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#obras', label: 'Obras' },
+  { href: '#noticias', label: 'Notícias' },
+  { href: '#contato', label: 'Contato' }
+];
+---
+<header class="fixed top-0 inset-x-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+  <div class="container flex items-center justify-between h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-3" aria-label="BETABA Engenharia - Início">
+      <img src="/logo-betaba.png" alt="" width="40" height="40" class="h-10 w-auto" />
+      <span class="font-display font-extrabold text-white tracking-tight text-lg hidden sm:block">
+        BETABA <span class="text-silver font-medium">ENGENHARIA</span>
+      </span>
+    </a>
+
+    <nav aria-label="Navegação principal" class="hidden md:flex items-center gap-8">
+      {links.map(l => (
+        <a href={l.href} class="text-silver hover:text-white text-sm font-medium transition-colors">
+          {l.label}
+        </a>
+      ))}
+    </nav>
+
+    <a
+      href="https://wa.me/5541999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"
+      target="_blank" rel="noopener"
+      class="btn-primary text-sm !px-4 !py-2"
+      aria-label="Falar no WhatsApp"
+    >
+      Orçamento
+    </a>
+  </div>
+</header>
