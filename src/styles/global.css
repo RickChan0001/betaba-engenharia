@@ -1,34 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+﻿@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A2A4A;
+  --color-steel: #1E5A8E;
+  --color-steel-light: #3E7FB8;
+  --color-silver: #C0C7CE;
+  --color-graphite: #3A3F45;
+  --color-bg: #F5F7F9;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+}
 
 @layer base {
-  :root {
-    --navy: #0A2A4A;
-    --steel: #1E5A8E;
-    --steel-light: #3E7FB8;
-    --silver: #C0C7CE;
-    --graphite: #3A3F45;
-    --bg: #F5F7F9;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
-
-  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-  body { @apply bg-bg text-graphite font-sans antialiased; }
-
-  /* Respeita quem prefere menos animação (WCAG 2.2) */
+  body {
+    @apply bg-bg text-graphite font-sans antialiased;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-steel-light);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-  }
-
-  /* Foco visível acessível */
-  :focus-visible {
-    outline: 3px solid var(--steel-light);
-    outline-offset: 3px;
-    border-radius: 4px;
   }
 }
 
@@ -44,8 +46,7 @@
            font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
   }
   .section-title {
-    @apply font-display text-3xl md:text-5xl font-extrabold text-navy
-           tracking-tight;
+    @apply font-display text-3xl md:text-5xl font-extrabold text-navy tracking-tight;
   }
   .section-subtitle {
     @apply text-lg text-graphite/80 max-w-2xl mx-auto;
