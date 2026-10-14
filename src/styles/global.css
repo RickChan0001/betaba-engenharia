@@ -1,29 +1,26 @@
 ﻿@import "tailwindcss";
 
 @theme {
-  --color-navy: #0A2A4A;
-  --color-steel: #1E5A8E;
-  --color-steel-light: #3E7FB8;
+  --color-ink: #0F1115;
+  --color-ink-soft: #16191F;
+  --color-ink-elevated: #1C2026;
+  --color-steel: #3E7FB8;
+  --color-steel-light: #5B9ED8;
   --color-silver: #C0C7CE;
-  --color-graphite: #3A3F45;
-  --color-bg: #F5F7F9;
+  --color-line: #262A31;
+  --color-bone: #0F1115;
+  --color-graphite: #9BA3AE;
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Montserrat', system-ui, sans-serif;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
-  }
-  body {
-    @apply bg-bg text-graphite font-sans antialiased;
-  }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { @apply bg-ink text-graphite font-sans antialiased; }
   :focus-visible {
-    outline: 3px solid var(--color-steel-light);
+    outline: 2px solid var(--color-steel-light);
     outline-offset: 3px;
-    border-radius: 4px;
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -35,20 +32,26 @@
 }
 
 @layer components {
+  .container-tight {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16;
+  }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-steel hover:bg-steel-light
-           text-white font-semibold px-6 py-3 rounded-lg
-           transition-colors duration-200;
+    @apply inline-flex items-center gap-2 bg-white hover:bg-silver
+           text-ink font-medium text-sm tracking-wide
+           px-6 py-3 rounded transition-colors duration-200;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 border-2 border-silver
-           hover:border-steel-light text-navy hover:text-steel-light
-           font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+    @apply inline-flex items-center gap-2 border border-white/20 hover:border-white
+           text-white font-medium text-sm tracking-wide
+           px-6 py-3 rounded transition-colors duration-200;
+  }
+  .label-caps {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-steel-light;
   }
   .section-title {
-    @apply font-display text-3xl md:text-5xl font-extrabold text-navy tracking-tight;
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15];
   }
   .section-subtitle {
-    @apply text-lg text-graphite/80 max-w-2xl mx-auto;
+    @apply text-base md:text-lg text-graphite max-w-2xl leading-relaxed;
   }
 }

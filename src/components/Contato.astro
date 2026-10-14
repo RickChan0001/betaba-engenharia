@@ -1,64 +1,64 @@
-<section id="contato" class="py-20 md:py-28">
-  <div class="container grid md:grid-cols-2 gap-16">
-    <div>
-      <h2 class="section-title">Vamos Construir Juntos</h2>
-      <p class="mt-4 text-graphite/85 text-lg">
-        Solicite um orçamento sem compromisso. Responderemos em até 24h úteis.
-      </p>
+﻿<section id="contato" class="py-24 md:py-32 bg-ink-soft border-t border-line">
+  <div class="container-tight">
 
-      <ul class="mt-10 space-y-5">
-        <li class="flex gap-4">
-          <span aria-hidden="true" class="text-2xl">📱</span>
-          <div>
-            <strong class="block text-navy font-semibold">WhatsApp</strong>
-            <a href="https://wa.me/5541999999999" class="text-steel hover:text-steel-light">
-              (41) 99999-9999
-            </a>
-          </div>
-        </li>
-        <li class="flex gap-4">
-          <span aria-hidden="true" class="text-2xl">✉️</span>
-          <div>
-            <strong class="block text-navy font-semibold">E-mail</strong>
-            <a href="mailto:contato@betabaengenharia.com.br" class="text-steel hover:text-steel-light">
-              contato@betabaengenharia.com.br
-            </a>
-          </div>
-        </li>
-        <li class="flex gap-4">
-          <span aria-hidden="true" class="text-2xl">📍</span>
-          <div>
-            <strong class="block text-navy font-semibold">Atendimento</strong>
-            <span class="text-graphite/80">Todo o litoral do Paraná</span>
-          </div>
-        </li>
-      </ul>
+    <div class="grid lg:grid-cols-12 gap-16">
+
+      <div class="lg:col-span-5">
+        <p class="label-caps mb-6">05 — Contato</p>
+        <h2 class="section-title">
+          Vamos construir<br />juntos.
+        </h2>
+        <p class="mt-6 text-graphite leading-relaxed max-w-md">
+          Solicite um orçamento sem compromisso. Responderemos em até 24h úteis.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7 lg:pt-12">
+        <ul class="divide-y divide-line border-y border-line">
+
+          <li class="grid grid-cols-[auto_1fr] gap-6 py-6 items-center">
+            <span class="text-xs font-mono text-graphite/50 w-8">01</span>
+            <div>
+              <p class="text-xs font-semibold tracking-[0.15em] uppercase text-steel-light mb-2">
+                WhatsApp
+              </p>
+              <a href="https://wa.me/5541999999999"
+                 target="_blank" rel="noopener"
+                 class="text-white text-lg font-medium hover:text-steel-light transition-colors">
+                (41) 99999-9999
+              </a>
+            </div>
+          </li>
+
+          <li class="grid grid-cols-[auto_1fr] gap-6 py-6 items-center">
+            <span class="text-xs font-mono text-graphite/50 w-8">02</span>
+            <div>
+              <p class="text-xs font-semibold tracking-[0.15em] uppercase text-steel-light mb-2">
+                E-mail
+              </p>
+              <a href="mailto:contato@betabaengenharia.com.br"
+                 class="text-white text-lg font-medium hover:text-steel-light transition-colors break-all">
+                contato@betabaengenharia.com.br
+              </a>
+            </div>
+          </li>
+
+          <li class="grid grid-cols-[auto_1fr] gap-6 py-6 items-center">
+            <span class="text-xs font-mono text-graphite/50 w-8">03</span>
+            <div>
+              <p class="text-xs font-semibold tracking-[0.15em] uppercase text-steel-light mb-2">
+                Atendimento
+              </p>
+              <p class="text-white text-lg font-medium">
+                Todo o litoral do Paraná
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
     </div>
 
-    <!-- action aponta para Formspree (grátis) - troque o ID depois -->
-    <form
-      action="https://formspree.io/f/SEU_ID_AQUI"
-      method="POST"
-      class="bg-white rounded-2xl p-8 border border-silver/40 shadow-sm space-y-5"
-    >
-      <div>
-        <label for="nome" class="block text-sm font-semibold text-navy mb-1">Nome</label>
-        <input id="nome" name="nome" required
-          class="w-full px-4 py-3 rounded-lg border border-silver/60 focus:border-steel focus:ring-2 focus:ring-steel/20 outline-none" />
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-semibold text-navy mb-1">E-mail</label>
-        <input id="email" name="email" type="email" required
-          class="w-full px-4 py-3 rounded-lg border border-silver/60 focus:border-steel focus:ring-2 focus:ring-steel/20 outline-none" />
-      </div>
-      <div>
-        <label for="msg" class="block text-sm font-semibold text-navy mb-1">Mensagem</label>
-        <textarea id="msg" name="mensagem" rows="5" required
-          class="w-full px-4 py-3 rounded-lg border border-silver/60 focus:border-steel focus:ring-2 focus:ring-steel/20 outline-none"></textarea>
-      </div>
-      <!-- honeypot anti-spam -->
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
-      <button type="submit" class="btn-primary w-full justify-center">Enviar mensagem</button>
-    </form>
   </div>
 </section>

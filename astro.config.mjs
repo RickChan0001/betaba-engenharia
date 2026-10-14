@@ -1,10 +1,12 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+﻿import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://betabaengenharia.com.br',
-  integrations: [tailwind(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()]
+  },
+  integrations: [sitemap()],
   build: { inlineStylesheets: 'auto' }
 });
