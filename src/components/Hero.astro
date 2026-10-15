@@ -1,33 +1,50 @@
-<section id="top" class="relative min-h-screen flex items-center pt-20 bg-navy overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy to-steel/40" aria-hidden="true"></div>
-  <div class="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full bg-steel/20 blur-3xl" aria-hidden="true"></div>
+﻿<section id="top" class="relative min-h-[90vh] flex items-center pt-24 pb-20 overflow-hidden">
+  <div class="mx-auto w-full max-w-[1400px] px-4 md:px-5 lg:px-6 relative grid lg:grid-cols-12 gap-6 items-center">
+    <div class="lg:col-span-7">
+      <p class="label-caps mb-8">Topografia · Litoral do Paraná</p>
 
-  <div class="container relative grid md:grid-cols-2 gap-12 items-center py-20">
-    <div>
-      <p class="text-silver text-sm font-medium tracking-widest uppercase mb-4">
-        Engenharia no Litoral do Paraná
-      </p>
-      <h1 class="font-display text-4xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
-        Construindo o <span class="text-silver">Futuro</span>, Juntos.
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight text-silver">
+        Construindo o futuro,<br />
+        <span class="text-silver/60">juntos.</span>
       </h1>
-      <p class="mt-6 text-lg text-silver/90 max-w-lg">
-        Projetos residenciais, comerciais e de infraestrutura com qualidade técnica
-        e compromisso com prazos em todo o litoral paranaense.
+
+      <p class="mt-8 text-lg text-silver/85 max-w-xl leading-relaxed">
+        Levantamentos topográficos, georreferenciamento e locação de obra
+        com precisão técnica em todo o litoral paranaense.
       </p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#contato" class="btn-primary">Solicitar orçamento</a>
-        <a href="#obras" class="btn-outline !border-silver/40 !text-silver hover:!text-white hover:!border-white">
-          Ver obras
+
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="#contato" class="btn-primary">
+          Solicitar orçamento
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#servicos" class="btn-outline">
+          Ver serviços
         </a>
       </div>
+
+      <dl class="mt-16 grid grid-cols-3 gap-8 max-w-md border-t border-silver/10 pt-8">
+        <div>
+          <dt class="font-display text-2xl font-bold text-silver">+20</dt>
+          <dd class="text-xs text-silver/70 uppercase tracking-wider mt-1">Projetos</dd>
+        </div>
+        <div>
+          <dt class="font-display text-2xl font-bold text-silver">2</dt>
+          <dd class="text-xs text-silver/70 uppercase tracking-wider mt-1">Anos</dd>
+        </div>
+        <div>
+          <dt class="font-display text-2xl font-bold text-silver">100%</dt>
+          <dd class="text-xs text-silver/70 uppercase tracking-wider mt-1">Precisão</dd>
+        </div>
+      </dl>
     </div>
 
-    <div class="hidden md:flex justify-center">
+    <div class="hidden lg:flex lg:col-span-5 justify-end items-center">
       <img
         src="/logo-betaba.png"
         alt="Logo BETABA Engenharia"
-        width="400" height="400"
-        class="w-80 lg:w-96 drop-shadow-2xl"
+        width="800" height="800"
+        class="w-[560px] xl:w-[660px] h-auto object-contain block"
         loading="eager"
       />
     </div>

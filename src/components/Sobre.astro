@@ -1,51 +1,48 @@
-<section id="sobre" class="py-20 md:py-28">
-  <div class="container grid md:grid-cols-2 gap-16 items-center">
-    <div>
-      <h2 class="section-title">Quem Somos</h2>
-      <p class="mt-6 text-graphite/90 leading-relaxed">
-        A <strong>BETABA Engenharia</strong> nasceu no litoral do Paraná com o propósito
-        de elevar o padrão da construção civil na região. Unimos experiência técnica,
-        materiais de qualidade e uma equipe comprometida com cada detalhe.
-      </p>
-      <p class="mt-4 text-graphite/90 leading-relaxed">
-        Do projeto à entrega, cuidamos de tudo com transparência, prazos respeitados
-        e comunicação clara — porque construir é, acima de tudo, uma relação de confiança.
-      </p>
+﻿<section id="sobre" class="py-24 md:py-32">
+  <div class="mx-auto w-full max-w-[1400px] px-4 md:px-5 lg:px-6 grid lg:grid-cols-12 gap-16">
 
-      <dl class="mt-10 grid grid-cols-3 gap-6">
-        <div>
-          <dt class="text-3xl md:text-4xl font-display font-extrabold text-steel">+50</dt>
-          <dd class="text-sm text-graphite/70 mt-1">Obras entregues</dd>
-        </div>
-        <div>
-          <dt class="text-3xl md:text-4xl font-display font-extrabold text-steel">10+</dt>
-          <dd class="text-sm text-graphite/70 mt-1">Anos de experiência</dd>
-        </div>
-        <div>
-          <dt class="text-3xl md:text-4xl font-display font-extrabold text-steel">100%</dt>
-          <dd class="text-sm text-graphite/70 mt-1">Compromisso</dd>
-        </div>
-      </dl>
+    <div class="lg:col-span-5">
+      <p class="label-caps mb-6">01 — Sobre</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-silver tracking-tight leading-[1.15]">
+        Topografia que<br />entende o litoral.
+      </h2>
     </div>
 
-    <aside class="bg-white rounded-2xl p-8 shadow-sm border border-silver/40">
-      <h3 class="font-display font-bold text-navy text-xl mb-6">Nossos valores</h3>
-      <ul class="space-y-4">
+    <div class="lg:col-span-7 lg:pt-12">
+      <p class="text-lg text-silver leading-relaxed">
+        A <strong class="font-semibold">BETABA Engenharia</strong> atua no litoral do Paraná
+        com foco em levantamentos topográficos, georreferenciamento e locação de obra.
+        Unimos equipamentos de precisão, experiência técnica e compromisso com prazos.
+      </p>
+      <p class="mt-6 text-silver/90 leading-relaxed">
+        Do estudo inicial do terreno à entrega do memorial para registro,
+        cuidamos de todas as etapas com transparência e comunicação clara —
+        porque medir bem é o primeiro passo para construir bem.
+      </p>
+
+      <div class="mt-12 p-6 border-l-2 border-steel bg-silver/5">
+        <p class="text-xs font-semibold tracking-[0.15em] uppercase text-steel-light mb-3">
+          Serviço parceiro
+        </p>
+        <p class="text-silver/90 leading-relaxed">
+          A <a href="https://formigeo.com.br" target="_blank" rel="noopener" class="text-silver font-semibold underline decoration-steel/40 hover:decoration-steel-light underline-offset-4 transition-colors">FormiGeo</a>{' '}oferece serviços complementares de topografia e georreferenciamento, auxiliando na melhor decisão em seu projeto.
+        </p>
+      </div>
+
+      <ul class="mt-12 grid sm:grid-cols-2 gap-x-8 gap-y-6">
         {[
-          ['Qualidade técnica', 'Materiais e mão de obra de primeira linha.'],
+          ['Equipamentos de precisão', 'Estação total, GNSS RTK e drone topográfico.'],
           ['Transparência', 'Orçamento claro, sem surpresas no final.'],
           ['Prazos cumpridos', 'Cronograma respeitado do início ao fim.'],
           ['Compromisso local', 'Conhecemos o litoral e suas particularidades.']
         ].map(([t, d]) => (
-          <li class="flex gap-4">
-            <span aria-hidden="true" class="mt-1 w-2 h-2 rounded-full bg-steel-light shrink-0"></span>
-            <div>
-              <strong class="text-navy font-semibold block">{t}</strong>
-              <span class="text-sm text-graphite/75">{d}</span>
-            </div>
+          <li class="border-t border-silver/10 pt-4">
+            <strong class="block text-silver font-semibold text-sm mb-1">{t}</strong>
+            <span class="text-sm text-silver/80 leading-relaxed">{d}</span>
           </li>
         ))}
       </ul>
-    </aside>
+    </div>
+
   </div>
 </section>

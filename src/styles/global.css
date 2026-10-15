@@ -1,15 +1,15 @@
 ﻿@import "tailwindcss";
 
 @theme {
-  --color-ink: #0F1115;
-  --color-ink-soft: #16191F;
-  --color-ink-elevated: #1C2026;
-  --color-steel: #3E7FB8;
-  --color-steel-light: #5B9ED8;
-  --color-silver: #C0C7CE;
-  --color-line: #262A31;
-  --color-bone: #0F1115;
-  --color-graphite: #9BA3AE;
+  --color-navy: #1E4F8E;
+  --color-navy-soft: #1E4F8E;
+  --color-navy-elevated: #FFFFFF;
+  --color-steel: #5B9ED8;
+  --color-steel-light: #7FB8E8;
+  --color-silver: #D4DAE1;
+  --color-line: rgba(212, 218, 225, 0.15);
+  --color-ink: #0A0A0A;
+  --color-graphite: #1A1A1A;
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Montserrat', system-ui, sans-serif;
@@ -17,7 +17,11 @@
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-  body { @apply bg-ink text-graphite font-sans antialiased; }
+  body {
+    background: linear-gradient(180deg, #2A5FA3 0%, #1E4F8E 100%);
+    background-attachment: fixed;
+    @apply text-silver font-sans antialiased;
+  }
   :focus-visible {
     outline: 2px solid var(--color-steel-light);
     outline-offset: 3px;
@@ -33,7 +37,7 @@
 
 @layer components {
   .container-tight {
-    @apply mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16;
+    @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-10;
   }
   .btn-primary {
     @apply inline-flex items-center gap-2 bg-white hover:bg-silver
@@ -41,17 +45,17 @@
            px-6 py-3 rounded transition-colors duration-200;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-white/20 hover:border-white
-           text-white font-medium text-sm tracking-wide
+    @apply inline-flex items-center gap-2 border border-silver/50 hover:border-silver
+           text-silver font-medium text-sm tracking-wide
            px-6 py-3 rounded transition-colors duration-200;
   }
   .label-caps {
-    @apply text-xs font-semibold tracking-[0.2em] uppercase text-steel-light;
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-silver/85;
   }
   .section-title {
-    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15];
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-silver tracking-tight leading-[1.15];
   }
   .section-subtitle {
-    @apply text-base md:text-lg text-graphite max-w-2xl leading-relaxed;
+    @apply text-base md:text-lg text-silver/85 max-w-2xl leading-relaxed;
   }
 }
