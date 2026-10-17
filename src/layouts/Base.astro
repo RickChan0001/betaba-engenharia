@@ -6,15 +6,53 @@ interface Props {
 const { title, description } = Astro.props;
 const siteUrl = Astro.site ?? new URL('https://betabaengenharia.com.br');
 const canonical = new URL(Astro.url.pathname, siteUrl);
-const ogImage = new URL('/logo-betaba.png', siteUrl);
+const ogImage = new URL('/betaba-logo-pagina.png', siteUrl);
 ---
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/betaba-logo-pagina.png" />
+  <link rel="apple-touch-icon" href="/betaba-logo-pagina.png" />
+  <link rel="canonical" href={canonical} />
+
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="theme-color" content="#1E4F8E" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "BETABA Engenharia",
+    "slogan": "Construindo o futuro, juntos",
+    "url": canonical.toString(),
+    "logo": ogImage.toString(),
+    "areaServed": "Litoral do Paraná",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    }
+  })} />
 </head>
 <body>
   <slot />
